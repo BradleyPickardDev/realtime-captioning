@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    container_name: redis
+    restart: always
+    networks:
+      - app-network
+    volumes:
+      - ./data:/data
+
+networks:
+  app-network:
+    driver: bridge
