@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { getUsage } from "../services/usage.service";
 
-export async function getUsageController(
+export default async function getUsageController(
   req: Request,
   res: Response
 ): Promise<void> {
